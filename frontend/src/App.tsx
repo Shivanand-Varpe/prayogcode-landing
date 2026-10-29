@@ -22,6 +22,11 @@ function App() {
   }, []);
 
   const navigateToCompiler = useCallback((initialCode?: string) => {
+    const externalCompilerUrl = import.meta.env.VITE_COMPILER_URL?.trim();
+    if (externalCompilerUrl) {
+      window.location.href = externalCompilerUrl;
+      return;
+    }
     if (initialCode) {
       setSelectedSnippetCode(initialCode);
     }

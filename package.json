@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
+    "build": "npm --prefix frontend run build && rm -rf dist && cp -r frontend/dist dist",
+    "start": "npm --prefix frontend run preview -- --host 0.0.0.0 --port 3000",
     "lint": "npm --prefix frontend run lint",
-    "preview": "npm --prefix frontend run preview"
+    "preview": "npm --prefix frontend run preview -- --host 0.0.0.0 --port 3000"
   }
 }

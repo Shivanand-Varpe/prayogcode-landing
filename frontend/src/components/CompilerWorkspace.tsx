@@ -72,8 +72,11 @@ export function CompilerWorkspace({
       reconnectTimerRef.current = null;
     }
 
+    const customWsUrl = import.meta.env.VITE_WS_URL?.trim();
     const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    const socket = new WebSocket(`${protocol}//${window.location.host}/ws`);
+    const wsEndpoint =
+      customWsUrl || `${protocol}//${window.location.host}/ws`;
+    const socket = new WebSocket(wsEndpoint);
     ws.current = socket;
     isConnectingRef.current = true;
 

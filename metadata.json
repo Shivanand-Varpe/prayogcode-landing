@@ -1,0 +1,5 @@
+{
+  "name": "PrayogCode — C Programming Laboratory",
+  "description": "Immersive browser-based C programming laboratory with real-time PTY terminal execution, hardened Docker sandboxing, and interactive 3D architecture visualization.",
+  "requestFramePermissions": []
+}

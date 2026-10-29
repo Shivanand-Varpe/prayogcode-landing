@@ -1,0 +1,12 @@
+node_modules/
+.env
+temp/
+*.exe
+*.o
+*.obj
+*.out
+test
+dist/
+build/
+.agents/
+skills-lock.json
